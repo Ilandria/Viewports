@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 668216041}
   - component: {fileID: 668216040}
   - component: {fileID: 668216038}
+  - component: {fileID: 668216039}
   m_Layer: 0
   m_Name: Ortho Cam (Front)
   m_TagString: Untagged
@@ -173,6 +174,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &668216039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668216037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92324f13a8712c469f0e708a63dfa30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &668216040
 Camera:
   m_ObjectHideFlags: 0
@@ -242,6 +255,7 @@ GameObject:
   - component: {fileID: 710027713}
   - component: {fileID: 710027712}
   - component: {fileID: 710027714}
+  - component: {fileID: 710027715}
   m_Layer: 5
   m_Name: RightView
   m_TagString: Untagged
@@ -323,6 +337,63 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &710027715
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710027710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8aac768bc522074fa6a789fb64645e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnViewportEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1864121848}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: StartTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnViewportHover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1864121848}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: Track
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnViewportExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1864121848}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: StopTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1100090973
 GameObject:
   m_ObjectHideFlags: 0
@@ -434,6 +505,7 @@ GameObject:
   - component: {fileID: 1209438009}
   - component: {fileID: 1209438008}
   - component: {fileID: 1209438006}
+  - component: {fileID: 1209438007}
   m_Layer: 0
   m_Name: Ortho Cam (Top)
   m_TagString: Untagged
@@ -473,6 +545,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1209438007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1209438005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92324f13a8712c469f0e708a63dfa30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1209438008
 Camera:
   m_ObjectHideFlags: 0
@@ -542,6 +626,7 @@ GameObject:
   - component: {fileID: 1248264896}
   - component: {fileID: 1248264895}
   - component: {fileID: 1248264897}
+  - component: {fileID: 1248264898}
   m_Layer: 5
   m_Name: TopView
   m_TagString: Untagged
@@ -623,6 +708,63 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &1248264898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248264893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8aac768bc522074fa6a789fb64645e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnViewportEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1209438007}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: StartTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnViewportHover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1209438007}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: Track
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnViewportExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1209438007}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: StopTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1352154417
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,6 +777,7 @@ GameObject:
   - component: {fileID: 1352154420}
   - component: {fileID: 1352154419}
   - component: {fileID: 1352154421}
+  - component: {fileID: 1352154422}
   m_Layer: 5
   m_Name: FrontView
   m_TagString: Untagged
@@ -716,6 +859,63 @@ MonoBehaviour:
   m_FlexibleWidth: 1
   m_FlexibleHeight: 1
   m_LayoutPriority: 1
+--- !u!114 &1352154422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1352154417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8aac768bc522074fa6a789fb64645e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnViewportEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 668216039}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: StartTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnViewportHover:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 668216039}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: Track
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnViewportExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 668216039}
+        m_TargetAssemblyTypeName: ViewportRaycaster, Assembly-CSharp
+        m_MethodName: StopTracking
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1573821915
 GameObject:
   m_ObjectHideFlags: 0
@@ -909,6 +1109,7 @@ GameObject:
   - component: {fileID: 1864121850}
   - component: {fileID: 1864121849}
   - component: {fileID: 1864121847}
+  - component: {fileID: 1864121848}
   m_Layer: 0
   m_Name: Ortho Cam (Right)
   m_TagString: Untagged
@@ -948,6 +1149,18 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &1864121848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864121846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92324f13a8712c469f0e708a63dfa30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!20 &1864121849
 Camera:
   m_ObjectHideFlags: 0

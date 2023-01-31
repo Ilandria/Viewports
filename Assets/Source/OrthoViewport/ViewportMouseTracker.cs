@@ -5,7 +5,7 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(RectTransform))]
-public class ViewportRaycaster : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ViewportMouseTracker : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	[SerializeField]
 	[SuppressMessage("Style", "IDE0044")]

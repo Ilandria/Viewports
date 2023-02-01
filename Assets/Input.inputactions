@@ -1,0 +1,154 @@
+{
+    "name": "Input",
+    "maps": [
+        {
+            "name": "Standard",
+            "id": "41b2b413-bdd2-4e5a-b0df-a40289faf5c4",
+            "actions": [
+                {
+                    "name": "CameraControlToggle",
+                    "type": "Value",
+                    "id": "879b5338-ffa3-4964-8907-37d520dcc48f",
+                    "expectedControlType": "Digital",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CameraHorizontal",
+                    "type": "Button",
+                    "id": "b1498fdd-1fb2-49fb-a007-7b6d83b03129",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "CameraVertical",
+                    "type": "Button",
+                    "id": "ea68e49a-7609-438a-be6e-d60135abfb3c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "cb26555c-3028-4e47-b853-3e1950efd944",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "Press(behavior=2)",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "CameraControlToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "Horizontal",
+                    "id": "9c6628e6-4c84-4e14-8f52-473ecc3c221b",
+                    "path": "2DVector",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraHorizontal",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "bbacad51-cce2-46f3-af4c-7e5a9536af55",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "CameraHorizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "2ae92493-dbb2-42e7-88b5-9239c22306f4",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "CameraHorizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "9ed84880-b57f-4c3a-b23e-5661901906cb",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "CameraHorizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "f898f7bb-d0c9-4e61-b95f-96047e3abdb9",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "CameraHorizontal",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Vertical",
+                    "id": "565faf36-5bb5-47bf-957e-6cbb9b93c302",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CameraVertical",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "2f1c5340-8045-4e00-8e6b-6bee8aa13aed",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "CameraVertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "69a3b6e5-1f7a-4d82-b5f3-869f57cc0993",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard & Mouse",
+                    "action": "CameraVertical",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Keyboard & Mouse",
+            "bindingGroup": "Keyboard & Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": false,
+                    "isOR": false
+                },
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

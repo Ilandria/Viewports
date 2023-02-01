@@ -54,7 +54,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.403
+    m_Value: 0.42
     min: 0
     max: 1
 --- !u!114 &-4426542879006763125
@@ -92,16 +92,16 @@ MonoBehaviour:
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
-    m_Value: 3.4
+    m_Value: 4.2
     min: 0.1
   aperture:
     m_OverrideState: 1
-    m_Value: 5.8
+    m_Value: 4.2
     min: 1
     max: 32
   focalLength:
     m_OverrideState: 1
-    m_Value: 68
+    m_Value: 42
     min: 1
     max: 300
   bladeCount:
@@ -190,7 +190,6 @@ MonoBehaviour:
   - {fileID: -4720241825022510112}
   - {fileID: 8722362112970038310}
   - {fileID: -4426542879006763125}
-  - {fileID: 6748802498035190154}
 --- !u!114 &1452126189617264966
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -207,7 +206,7 @@ MonoBehaviour:
   m_AdvancedMode: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 0.167
+    m_Value: 0.042
     min: -1
     max: 1
   xMultiplier:
@@ -253,7 +252,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.369
+    m_Value: 0.42
     min: 0
     max: 1
   smoothness:
@@ -264,44 +263,6 @@ MonoBehaviour:
   rounded:
     m_OverrideState: 0
     m_Value: 0
---- !u!114 &6748802498035190154
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
-  m_Name: ColorAdjustments
-  m_EditorClassIdentifier: 
-  active: 1
-  m_AdvancedMode: 0
-  postExposure:
-    m_OverrideState: 0
-    m_Value: -0.81
-  contrast:
-    m_OverrideState: 1
-    m_Value: 5.3
-    min: -100
-    max: 100
-  colorFilter:
-    m_OverrideState: 0
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
-    hdr: 1
-    showAlpha: 0
-    showEyeDropper: 1
-  hueShift:
-    m_OverrideState: 0
-    m_Value: 10
-    min: -180
-    max: 180
-  saturation:
-    m_OverrideState: 1
-    m_Value: -19.8
-    min: -100
-    max: 100
 --- !u!114 &8207143065794086227
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -318,10 +279,10 @@ MonoBehaviour:
   m_AdvancedMode: 0
   type:
     m_OverrideState: 1
-    m_Value: 3
+    m_Value: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.155
+    m_Value: 0.42
     min: 0
     max: 1
   response:
@@ -352,7 +313,7 @@ MonoBehaviour:
     min: 0
   intensity:
     m_OverrideState: 1
-    m_Value: 10.66
+    m_Value: 42
     min: 0
   scatter:
     m_OverrideState: 0

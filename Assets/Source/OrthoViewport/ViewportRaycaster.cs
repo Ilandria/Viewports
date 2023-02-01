@@ -37,14 +37,10 @@ public class ViewportRaycaster : MonoBehaviour
 
 	public void Track(Vector3 position)
 	{
-		// Todo: fix the math here so it lines up properly.
 		Ray ray = viewportCamera.ViewportPointToRay(position);
 
 		OnRaycast?.Invoke(ray.origin);
 
-		// This could check for a specific "grabbable" component on a game object, which would be more performant on a larger scale,
-		// but this approach allows the system to work with any object listening to the events instead of only specific types.
-		// Definitely something to re-think for performance if this project was larger scale.
 		if(Physics.Raycast(ray, out RaycastHit hitInfo, viewportCamera.farClipPlane - viewportCamera.nearClipPlane, mask.value))
 		{
 			OnRaycastHit?.Invoke(hitInfo.transform, ray.origin);
@@ -53,6 +49,9 @@ public class ViewportRaycaster : MonoBehaviour
 
 	public void StopTracking()
 	{
+		// This could check for a specific "grabbable" component on a game object, which would be more performant on a larger scale,
+		// but this approach allows the system to work with any object listening to the events instead of only specific types.
+		// Definitely something to re-think for performance if this project was larger scale.
 		OnViewportExit?.Invoke();
 	}
 }

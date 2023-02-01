@@ -8,8 +8,12 @@ public class FirstPersonFlightController : MonoBehaviour
 	[SerializeField]
 	private float movementForce = 5.0f;
 
+	[SerializeField]
+	private float lookForce = 2.0f;
+
 	private new Rigidbody rigidbody = null;
-	private Vector3 rawInput = Vector3.zero;
+	private Vector3 rawMovementInput = Vector3.zero;
+	private Vector3 rawLookInput = Vector3.zero;
 	private bool controlsEnabled = false;
 
 	[SuppressMessage("CodeQuality", "IDE0051")]
@@ -26,21 +30,30 @@ public class FirstPersonFlightController : MonoBehaviour
 			return;
 		}
 
-		rawInput.Normalize();
-		Vector3 movementDirection = transform.TransformDirection(rawInput);
+		rawMovementInput.Normalize();
+		Vector3 movementDirection = transform.TransformDirection(rawMovementInput);
+
+		rigidbody.AddTorque(transform.TransformVector(rawLookInput * lookForce), ForceMode.Force);
 		rigidbody.AddForce(movementDirection * movementForce, ForceMode.Force);
 	}
 
 	public void Horizontal(InputAction.CallbackContext context)
 	{
 		Vector2 horizontal = context.ReadValue<Vector2>();
-		rawInput.z = horizontal.y;
-		rawInput.x = horizontal.x;
+		rawMovementInput.z = horizontal.y;
+		rawMovementInput.x = horizontal.x;
 	}
 
 	public void Vertical(InputAction.CallbackContext context)
 	{
-		rawInput.y = context.ReadValue<float>();
+		rawMovementInput.y = context.ReadValue<float>();
+	}
+
+	public void Look(InputAction.CallbackContext context)
+	{
+		Vector2 look = context.ReadValue<Vector2>();
+		rawLookInput.x = -look.y;
+		rawLookInput.y = look.x;
 	}
 
 	public void ToggleControls(InputAction.CallbackContext context)

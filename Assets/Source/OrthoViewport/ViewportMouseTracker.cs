@@ -47,12 +47,7 @@ public class ViewportMouseTracker : MonoBehaviour, IPointerEnterHandler, IPointe
 
 	private void StopTracking()
 	{
-		if (cursorRoutine != null)
-		{
-			StopCoroutine(cursorRoutine);
-			cursorRoutine = null;
-			OnViewportExit?.Invoke();
-		}
+		this.SafeStopCoroutine(ref cursorRoutine, OnViewportExit);
 	}
 
 	private IEnumerator TrackCursor()

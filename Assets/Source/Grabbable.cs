@@ -1,43 +1,49 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class Grabbable : MonoBehaviour
 {
-    private bool isGrabbed = false;
-    private Vector3 grabOffset = Vector3.zero;
+	private Vector3 grabOffset = Vector3.zero;
+	private Coroutine checkForRelease = null;
 
-    public void Hover(Transform hoveredTransform, Vector3 worldPosition)
-    {
-        if (isGrabbed || hoveredTransform != transform)
-        {
-            return;
-        }
+	public void Hover(Transform hoveredTransform, Vector3 worldPosition)
+	{
+		if (checkForRelease != null || hoveredTransform != transform)
+		{
+			return;
+		}
 
-        if (Input.GetMouseButtonDown((int)MouseButton.LeftMouse))
-        {
-            isGrabbed = true;
-            grabOffset = transform.position - worldPosition;
-        }
-    }
+		if (Input.GetMouseButtonDown((int)MouseButton.LeftMouse))
+		{
+			grabOffset = transform.position - worldPosition;
+			checkForRelease = StartCoroutine(CheckForRelease());
+		}
+	}
 
-    public void Move(Vector3 worldPosition)
-    {
-        if (isGrabbed)
-        {
-            transform.position = worldPosition + grabOffset;
-        }
-    }
+	public void Move(Vector3 worldPosition)
+	{
+		if (checkForRelease != null)
+		{
+			transform.position = worldPosition + grabOffset;
+		}
+	}
 
-    public void Release()
-    {
-        isGrabbed = false;
-    }
+	public void Release()
+	{
+		this.SafeStopCoroutine(ref checkForRelease);
+	}
 
-    public void Update()
-    {
-        if (isGrabbed && Input.GetMouseButtonUp((int)MouseButton.LeftMouse))
-        {
-            Release();
-        }
-    }
+	private IEnumerator CheckForRelease()
+	{
+		while (true)
+		{
+			if (Input.GetMouseButtonUp((int)MouseButton.LeftMouse))
+			{
+				Release();
+			}
+
+			yield return null;
+		}
+	}
 }

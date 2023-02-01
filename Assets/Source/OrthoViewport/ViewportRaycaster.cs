@@ -42,6 +42,9 @@ public class ViewportRaycaster : MonoBehaviour
 
 		OnRaycast?.Invoke(ray.origin);
 
+		// This could check for a specific "grabbable" component on a game object, which would be more performant on a larger scale,
+		// but this approach allows the system to work with any object listening to the events instead of only specific types.
+		// Definitely something to re-think for performance if this project was larger scale.
 		if(Physics.Raycast(ray, out RaycastHit hitInfo, viewportCamera.farClipPlane - viewportCamera.nearClipPlane, mask.value))
 		{
 			OnRaycastHit?.Invoke(hitInfo.transform, ray.origin);

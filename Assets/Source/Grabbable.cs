@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,7 +8,7 @@ public class Grabbable : MonoBehaviour
 
     public void Hover(Transform hoveredTransform, Vector3 worldPosition)
     {
-        if (hoveredTransform != transform)
+        if (isGrabbed || hoveredTransform != transform)
         {
             return;
         }
@@ -39,7 +37,7 @@ public class Grabbable : MonoBehaviour
     {
         if (isGrabbed && Input.GetMouseButtonUp((int)MouseButton.LeftMouse))
         {
-            isGrabbed = false;
+            Release();
         }
     }
 }

@@ -32,6 +32,7 @@ public class Grabbable : MonoBehaviour
 	public void Release()
 	{
 		this.SafeStopCoroutine(ref checkForRelease);
+		grabOffset = Vector3.zero;
 	}
 
 	private IEnumerator CheckForRelease()

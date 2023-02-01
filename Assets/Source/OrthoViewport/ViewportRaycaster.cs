@@ -33,6 +33,7 @@ public class ViewportRaycaster : MonoBehaviour
 	public void StartTracking()
 	{
 		// Not currently used.
+		OnViewportExit?.Invoke();
 	}
 
 	public void Track(Vector3 position)
@@ -45,6 +46,7 @@ public class ViewportRaycaster : MonoBehaviour
 		{
 			OnRaycastHit?.Invoke(hitInfo.transform, ray.origin);
 		}
+		Debug.DrawLine(ray.origin, ray.origin + ray.direction * (viewportCamera.farClipPlane - viewportCamera.nearClipPlane));
 	}
 
 	public void StopTracking()

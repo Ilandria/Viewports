@@ -1,17 +1,20 @@
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class BonkTracker : MonoBehaviour
 {
 	[SerializeField]
-	[SuppressMessage("Style", "IDE0044")]
 	private UnityEvent<string> OnBonk = new UnityEvent<string>();
 
 	private readonly Queue<int> bonkOrder = new Queue<int>();
 
-	[SuppressMessage("CodeQuality", "IDE0051")]
+	public void ClearBonks()
+	{
+		bonkOrder.Clear();
+		NotifyOfBonk();
+	}
+
 	private void OnCollisionEnter(Collision collision)
 	{
 		switch (collision.collider.tag)
@@ -39,6 +42,11 @@ public class BonkTracker : MonoBehaviour
 			bonkOrder.Dequeue();
 		}
 
+		NotifyOfBonk();
+	}
+
+	private void NotifyOfBonk()
+	{
 		OnBonk?.Invoke(string.Join("", bonkOrder));
 	}
 }

@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -9,20 +8,16 @@ public class ViewportRaycaster : MonoBehaviour
 	private LayerMask mask;
 
 	[SerializeField]
-	[SuppressMessage("Style", "IDE0044")]
 	private UnityEvent<Transform, Vector3> OnRaycastHit = new UnityEvent<Transform, Vector3>();
 
 	[SerializeField]
-	[SuppressMessage("Style", "IDE0044")]
 	private UnityEvent<Vector3> OnRaycast = new UnityEvent<Vector3>();
 
 	[SerializeField]
-	[SuppressMessage("Style", "IDE0044")]
 	private UnityEvent OnViewportExit = new UnityEvent();
 
 	private Camera viewportCamera = null;
 
-	[SuppressMessage("CodeQuality", "IDE0051")]
 	private void Start()
 	{
 		viewportCamera = GetComponent<Camera>();

@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -8,15 +7,12 @@ using UnityEngine.EventSystems;
 public class ViewportMouseTracker : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
 	[SerializeField]
-	[SuppressMessage("Style", "IDE0044")]
 	private UnityEvent OnViewportEnter = new UnityEvent();
 
 	[SerializeField]
-	[SuppressMessage("Style", "IDE0044")]
 	private UnityEvent<Vector3> OnViewportHover = new UnityEvent<Vector3>();
 
 	[SerializeField]
-	[SuppressMessage("Style", "IDE0044")]
 	private UnityEvent OnViewportExit = new UnityEvent();
 
 	private Coroutine cursorRoutine = null;
@@ -31,7 +27,6 @@ public class ViewportMouseTracker : MonoBehaviour, IPointerEnterHandler, IPointe
 		StopTracking();
 	}
 
-	[SuppressMessage("CodeQuality", "IDE0051")]
 	private void OnDisable()
 	{
 		StopTracking();

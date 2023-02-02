@@ -1,4 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -87,13 +86,11 @@ public class FirstPersonFlightController : MonoBehaviour
 
 	#endregion
 
-	[SuppressMessage("CodeQuality", "IDE0051")]
 	private void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
 	}
 
-	[SuppressMessage("CodeQuality", "IDE0051")]
 	private void FixedUpdate()
 	{
 		if (!controlsEnabled)
@@ -112,7 +109,6 @@ public class FirstPersonFlightController : MonoBehaviour
 
 	// Old gross polling system because WebGL doesn't play nice with the new event-driven input system.
 #if UNITY_WEBGL
-	[SuppressMessage("CodeQuality", "IDE0051")]
 	private void Update()
 	{
 		rawMovementInput = Vector3.zero;
@@ -178,5 +174,12 @@ public class FirstPersonFlightController : MonoBehaviour
 		controlsEnabled = context.ReadValue<float>() > 0.5f;
 		Cursor.visible = !controlsEnabled;
 #endif
+	}
+
+	public void SetPosition(Transform target)
+	{
+		rigidbody.velocity = Vector3.zero;
+		rigidbody.angularVelocity = Vector3.zero;
+		transform.SetPositionAndRotation(target.position, target.rotation);
 	}
 }

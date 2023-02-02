@@ -3432,6 +3432,15 @@ MonoBehaviour:
   movementForce: 150
   lookForce: 5
   rollForce: 15
+  forward: 119
+  backward: 115
+  left: 97
+  right: 100
+  rollLeft: 113
+  rollRight: 101
+  up: 32
+  down: 306
+  cameraMouseButton: 1
 --- !u!54 &1573821922
 Rigidbody:
   m_ObjectHideFlags: 0

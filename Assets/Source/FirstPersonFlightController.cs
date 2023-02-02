@@ -11,6 +11,9 @@ public class FirstPersonFlightController : MonoBehaviour
 	[SerializeField]
 	private float lookForce = 2.0f;
 
+	[SerializeField]
+	private float rollForce = 10.0f;
+
 	private new Rigidbody rigidbody = null;
 	private Vector3 rawMovementInput = Vector3.zero;
 	private Vector3 rawLookInput = Vector3.zero;
@@ -33,7 +36,7 @@ public class FirstPersonFlightController : MonoBehaviour
 		rawMovementInput.Normalize();
 		Vector3 movementDirection = transform.TransformDirection(rawMovementInput);
 
-		rigidbody.AddTorque(transform.TransformVector(rawLookInput * lookForce), ForceMode.Force);
+		rigidbody.AddTorque(transform.TransformVector(rawLookInput), ForceMode.Force);
 		rigidbody.AddForce(movementDirection * movementForce, ForceMode.Force);
 	}
 
@@ -51,9 +54,14 @@ public class FirstPersonFlightController : MonoBehaviour
 
 	public void Look(InputAction.CallbackContext context)
 	{
-		Vector2 look = context.ReadValue<Vector2>();
+		Vector2 look = context.ReadValue<Vector2>() * lookForce;
 		rawLookInput.x = -look.y;
 		rawLookInput.y = look.x;
+	}
+	
+	public void Roll(InputAction.CallbackContext context)
+	{
+		rawLookInput.z = -context.ReadValue<float>() * rollForce;
 	}
 
 	public void ToggleControls(InputAction.CallbackContext context)

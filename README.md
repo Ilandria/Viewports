@@ -9,6 +9,7 @@
 
 # Notes
 * Most of the assessment-related code is in the /Source/OrthoViewport folder and in the root of /Source. Code found in Misc is mostly fun extra stuff.
+* DisplayMouseTracker isn't used, it was for a version of the main camera grabbing that wasn't implemented. This class should be removed.
 
 # Differences from assessment specs
 * The viewports are on the right side of the screen to not interfere with the how-to-use instructions.

@@ -67,5 +67,6 @@ public class FirstPersonFlightController : MonoBehaviour
 	public void ToggleControls(InputAction.CallbackContext context)
 	{
 		controlsEnabled = context.ReadValue<float>() > 0.5f;
+		Cursor.visible = !controlsEnabled;
 	}
 }

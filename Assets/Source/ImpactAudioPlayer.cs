@@ -30,10 +30,9 @@ public class ImpactAudioPlayer : MonoBehaviour
 	{
 		foreach (SoundMap soundMap in soundEffects)
 		{
-			if (collision.collider.tag.Equals(soundMap.objectTag))
+			if (string.IsNullOrWhiteSpace(soundMap.objectTag) || collision.collider.tag.Equals(soundMap.objectTag))
 			{
-				audioSource.clip = soundMap.audioClip;
-				audioSource.Play();
+				audioSource.PlayOneShot(soundMap.audioClip);
 			}
 		}
 	}

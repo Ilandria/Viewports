@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 17941633}
   m_Layer: 0
   m_Name: Room
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -254,7 +254,7 @@ GameObject:
   - component: {fileID: 46486703}
   m_Layer: 27
   m_Name: UpperPlatform
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -518,7 +518,7 @@ GameObject:
   - component: {fileID: 191183410}
   m_Layer: 0
   m_Name: Back Wall
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 212985148}
   m_Layer: 0
   m_Name: Left Wall
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -953,7 +953,7 @@ GameObject:
   - component: {fileID: 341999211}
   m_Layer: 0
   m_Name: Right Wall
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -1206,7 +1206,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371970466}
   m_LocalRotation: {x: -0, y: -0.33872625, z: -0, w: 0.940885}
-  m_LocalPosition: {x: -2.71, y: -4.439, z: 2.25}
+  m_LocalPosition: {x: -2.71, y: -3.797, z: 2.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 730194115}
@@ -1353,6 +1353,8 @@ MonoBehaviour:
   soundEffects:
   - objectTag: Player
     audioClip: {fileID: 8300000, guid: 54e6352498fb58b4d918aba202eb469b, type: 3}
+  - objectTag: 
+    audioClip: {fileID: 8300000, guid: 9e51775a6e4b9574cb4c1c421310662e, type: 3}
 --- !u!1 &668216037
 GameObject:
   m_ObjectHideFlags: 0
@@ -2044,7 +2046,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 787195592}
   m_LocalRotation: {x: -0, y: 0.9349878, z: -0, w: 0.3546799}
-  m_LocalPosition: {x: 2.928, y: -1.794, z: -3.265}
+  m_LocalPosition: {x: 2.928, y: 2.358, z: -3.265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1741897371}
@@ -2190,6 +2192,8 @@ MonoBehaviour:
   soundEffects:
   - objectTag: Player
     audioClip: {fileID: 8300000, guid: cec14d6bfc93358429f2019936d13543, type: 3}
+  - objectTag: 
+    audioClip: {fileID: 8300000, guid: ab397633ee572194e89cf88e2930503c, type: 3}
 --- !u!1 &1082253017
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,7 +2846,7 @@ GameObject:
   - component: {fileID: 1313338175}
   m_Layer: 0
   m_Name: Floor
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -3169,7 +3173,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356428562}
   m_LocalRotation: {x: -0, y: 0.32920033, z: -0, w: 0.9442601}
-  m_LocalPosition: {x: 0.889, y: 2.653, z: 0.629}
+  m_LocalPosition: {x: 0.889, y: 3.155, z: 0.629}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1745804807}
@@ -3316,6 +3320,8 @@ MonoBehaviour:
   soundEffects:
   - objectTag: Player
     audioClip: {fileID: 8300000, guid: f219defadb73c474bb1c7cea1f87a5ed, type: 3}
+  - objectTag: 
+    audioClip: {fileID: 8300000, guid: 2b395a9626e2bd34ba47d872dc251e30, type: 3}
 --- !u!1 &1371177839
 GameObject:
   m_ObjectHideFlags: 0
@@ -3410,6 +3416,8 @@ GameObject:
   - component: {fileID: 1446280442}
   - component: {fileID: 1446280443}
   - component: {fileID: 1446280444}
+  - component: {fileID: 1446280446}
+  - component: {fileID: 1446280445}
   m_Layer: 14
   m_Name: Unlit Sphere (Player)
   m_TagString: Player
@@ -3549,6 +3557,119 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1446280445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446280437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b45ab47ac71af7b48be0073856e3da1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundEffects:
+  - objectTag: Room
+    audioClip: {fileID: 8300000, guid: 285dc339a787f6d438ed20b9c715b779, type: 3}
+  - objectTag: MainCamera
+    audioClip: {fileID: 8300000, guid: 7af703500e49af947af3b83e657a83bc, type: 3}
+--- !u!82 &1446280446
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446280437}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1573821915
 GameObject:
   m_ObjectHideFlags: 0
@@ -4091,7 +4212,7 @@ GameObject:
   - component: {fileID: 1619237416}
   m_Layer: 27
   m_Name: LowerPlatform
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4672,7 +4793,7 @@ GameObject:
   - component: {fileID: 1856836718}
   m_Layer: 0
   m_Name: Front Wall
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -5346,7 +5467,7 @@ GameObject:
   - component: {fileID: 2011898540}
   m_Layer: 0
   m_Name: Ceiling
-  m_TagString: Untagged
+  m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295

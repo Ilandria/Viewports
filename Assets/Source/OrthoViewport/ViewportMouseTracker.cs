@@ -17,6 +17,13 @@ public class ViewportMouseTracker : MonoBehaviour, IPointerEnterHandler, IPointe
 
 	private Coroutine cursorRoutine = null;
 
+	private RectTransform viewportTransform;
+
+	private void Start()
+	{
+		viewportTransform = GetComponent<RectTransform>();
+	}
+
 	public void OnPointerEnter(PointerEventData eventData)
 	{
 		StartTracking();
@@ -51,7 +58,6 @@ public class ViewportMouseTracker : MonoBehaviour, IPointerEnterHandler, IPointe
 		{
 			// Calculate pixel coordinates of viewport.
 			Vector3[] corners = new Vector3[4];
-			RectTransform viewportTransform = GetComponent<RectTransform>();
 			viewportTransform.GetWorldCorners(corners);
 			Rect viewportRect = new Rect(corners[0], corners[2] - corners[0]);
 

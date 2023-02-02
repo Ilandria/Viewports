@@ -7,6 +7,9 @@
 * Controls are on-screen in the application.
 * Alt-F4 to exit if you're using the Standalone app.
 
+# Notes
+* Most of the assessment-related code is in the OrthoViewport folder and in the root of Source. Code found in Misc is mostly fun extra stuff.
+
 # Differences from assessment specs
 * The viewports are on the right side of the screen to not interfere with the how-to-use instructions.
 * The main view doesn't support click & drag because implementing a second ray-tracer for a perspective camera would have been almost entirely duplicate work. The ortho raycaster is using a trick to function quickly: we don't need to know the depth of the object from the viewport location since it's on a 2d plane. However, for the main view to function a separate implementation that does not use this trick would be required. Instead of writing effectively duplicate code, I instead focused on showcasing other uses of the Unity engine such as audio, physics, baked lighting, culling masks, layer masks, etc.

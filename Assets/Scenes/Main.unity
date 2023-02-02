@@ -7371,7 +7371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f0590893d768d49b22c0539b19662a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  videoUrl: https://dl.dropboxusercontent.com/s/8uvbpwnrck1qhqq/Wrongwarp.mp4
 --- !u!328 &1082253022
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -7397,7 +7396,7 @@ VideoPlayer:
   - {fileID: 1082253023}
   m_DirectAudioVolumes:
   - 0.8
-  m_Url: 
+  m_Url: https://github.com/Ilandria/Viewports/raw/main/Assets/StreamingAssets/Wrongwarp.mp4
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1

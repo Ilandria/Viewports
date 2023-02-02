@@ -8,7 +8,7 @@
 * Alt-F4 to exit if you're using the Standalone app.
 
 # Notes
-* Most of the assessment-related code is in the OrthoViewport folder and in the root of Source. Code found in Misc is mostly fun extra stuff.
+* Most of the assessment-related code is in the /Source/OrthoViewport folder and in the root of /Source. Code found in Misc is mostly fun extra stuff.
 
 # Differences from assessment specs
 * The viewports are on the right side of the screen to not interfere with the how-to-use instructions.
